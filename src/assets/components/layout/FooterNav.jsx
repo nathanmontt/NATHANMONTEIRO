@@ -10,36 +10,46 @@ function FooterNav() {
     { 
       id: 1, 
       title: "E-commerce React", 
-      description: "Loja virtual completa", 
+      description: "Loja virtual completa com carrinho de compras, sistema de pagamento e gerenciamento de produtos.", 
+      image: "/images/ecommerce-react.jpg",
       tags: ["react", "javascript"],
+      technologies: ["React", "JavaScript", "CSS3", "Node.js"],
       className: "project-react project-javascript" 
     },
     { 
       id: 2, 
       title: "Dashboard Vue", 
-      description: "Painel administrativo", 
+      description: "Painel administrativo com gráficos interativos e controle de usuários.", 
+      image: "/images/dashboard-vue.jpg",
       tags: ["vue", "javascript"],
+      technologies: ["Vue.js", "JavaScript", "Chart.js", "SCSS"],
       className: "project-vue project-javascript" 
     },
     { 
       id: 3, 
       title: "Landing Page React", 
-      description: "Site institucional", 
+      description: "Site institucional responsivo com animações suaves e design moderno.", 
+      image: "/images/landing-react.jpg",
       tags: ["react"],
+      technologies: ["React", "Tailwind CSS", "Framer Motion"],
       className: "project-react" 
     },
     { 
       id: 4, 
       title: "App Vue", 
-      description: "Aplicativo web", 
+      description: "Aplicativo web para gestão de tarefas com interface intuitiva.", 
+      image: "/images/app-vue.jpg",
       tags: ["vue"],
+      technologies: ["Vue.js", "Vuex", "CSS3"],
       className: "project-vue" 
     },
     { 
       id: 5, 
       title: "Jogo JavaScript", 
-      description: "Game em vanilla JS", 
+      description: "Game interativo desenvolvido em vanilla JavaScript com canvas.", 
+      image: "/images/game-js.jpg",
       tags: ["javascript"],
+      technologies: ["JavaScript", "HTML5 Canvas", "CSS3"],
       className: "project-javascript" 
     }
   ]
@@ -140,21 +150,59 @@ function FooterNav() {
               </button>
             </div>
 
-            {/* LISTA DE PROJETOS FILTRADOS */}
-            <div className="space-y-3 max-h-60 overflow-y-auto">
+            {/* LISTA DE PROJETOS COM NOVO TEMPLATE */}
+            <div className="space-y-4 max-h-80 overflow-y-auto custom-scrollbar pr-2">
               {getFilteredProjects().map(project => (
                 <div 
                   key={project.id} 
-                  className={`p-3 rounded bg-black/20 border border-gray-600/30 ${project.className}`}
+                  className={`project-card bg-black/20 border border-gray-600/30 rounded-lg overflow-hidden hover:bg-black/30 transition-all duration-300 ${project.className}`}
                 >
-                  <h3 className="text-white text-sm font-bold mb-1">{project.title}</h3>
-                  <p className="text-(--text-color) text-xs">{project.description}</p>
-                  <div className="flex gap-1 mt-2">
-                    {project.tags.map(tag => (
-                      <span key={tag} className="px-2 py-1 bg-white/10 rounded text-xs text-(--text-color)">
-                        {tag}
+                  {/* IMAGEM DO PROJETO */}
+                  <div className="relative h-32 bg-gray-800/50 overflow-hidden">
+                    <img 
+                      src={project.image} 
+                      alt={project.title}
+                      className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-300"
+                      onError={(e) => {
+                        // Fallback caso a imagem não carregue
+                        e.target.style.display = 'none'
+                        e.target.nextSibling.style.display = 'flex'
+                      }}
+                    />
+                    {/* Fallback para quando não há imagem */}
+                    <div className="absolute inset-0 bg-gray-700/50 hidden items-center justify-center">
+                      <span className="text-(--text-color) text-xs">Sem imagem</span>
+                    </div>
+                  </div>
+
+                  {/* CONTEÚDO DO PROJETO */}
+                  <div className="p-4">
+                    {/* TÍTULO */}
+                    <h3 className="text-white text-sm font-bold mb-2 font-(family-name:--main-font)">
+                      {project.title}
+                    </h3>
+
+                    {/* DESCRIÇÃO */}
+                    <p className="text-(--text-color) text-xs leading-relaxed mb-3">
+                      {project.description}
+                    </p>
+
+                    {/* LINGUAGENS/TECNOLOGIAS */}
+                    <div className="space-y-2">
+                      <span className="text-(--text-color) text-xs font-medium block">
+                        Tecnologias:
                       </span>
-                    ))}
+                      <div className="flex flex-wrap gap-1">
+                        {project.technologies.map((tech, index) => (
+                          <span 
+                            key={index} 
+                            className="px-2 py-1 bg-white/10 rounded text-xs text-(--text-color) border border-white/20"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </div>
               ))}
