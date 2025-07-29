@@ -7,8 +7,8 @@ function FooterNav() {
   const menuItems = [
     { name: 'SOBRE', id: 'sobre' },
     { name: 'PROJETOS', id: 'projetos' },
+    { name: 'CURRÍCULO', id: 'curriculo' },
     { name: 'CONTATO', id: 'contato' },
-    { name: 'CURRÍCULO', id: 'curriculo' }
   ]
 
   const handleMenuClick = (e, itemId) => {
@@ -25,30 +25,32 @@ function FooterNav() {
     switch(activeModal) {
       case 'sobre':
         return (
-          <div className="text-center">
-            <h2 className="text-3xl font-(family-name:--secondary-font) mb-6 text-white">SOBRE MIM</h2>
-            <p className="text-(--text-color) leading-relaxed mb-4">
-              Desenvolvedor Frontend apaixonado por criar experiências digitais únicas e funcionais.
+          <div className='container-about'>
+            <h2 class="text-3xl md:text-4xl font-(family-name:--secondary-font) mb-4 text-white">SOBRE MIM</h2>
+            <p class="text-(--text-color) leading-relaxed mb-3 text-sm">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, commodi? texto 1
             </p>
-            <p className="text-(--text-color) leading-relaxed">
-              Especializado em React, JavaScript e tecnologias modernas de desenvolvimento web.
+            <p class="text-(--text-color) leading-relaxed text-sm">
+              Lorem ipsum dolor sit amet. texto 2
             </p>
           </div>
         )
+
       case 'projetos':
         return (
-          <div className="text-center">
-            <h2 className="text-3xl font-(family-name:--secondary-font) mb-6 text-white">PROJETOS</h2>
-            <p className="text-(--text-color) leading-relaxed">
-              Aqui você encontrará uma seleção dos meus trabalhos mais recentes e relevantes.
+          <div className="container-projects">
+            <h2 class="text-3xl md:text-4xl font-(family-name:--secondary-font) mb-4 text-white">PROJETOS</h2>
+            <p class="text-(--text-color) leading-relaxed text-sm">
+              Lorem ipsum dolor sit amet. texto 1
             </p>
           </div>
         )
+
       case 'contato':
         return (
-          <div className="text-center">
-            <h2 className="text-3xl font-(family-name:--secondary-font) mb-6 text-white">CONTATO</h2>
-            <div className="space-y-3 text-(--text-color)">
+          <div class="text-left">
+            <h2 class="text-3xl md:text-4xl font-(family-name:--secondary-font) mb-4 text-white">CONTATO</h2>
+            <div class="space-y-2 text-(--text-color) text-sm">
               <p>📧 nathan@exemplo.com</p>
               <p>📱 (11) 99999-9999</p>
               <p>💼 LinkedIn: /in/nathanmonteiro</p>
@@ -56,23 +58,22 @@ function FooterNav() {
             </div>
           </div>
         )
+
       case 'curriculo':
         return (
-          <div className="text-center">
-            <h2 className="text-3xl font-(family-name:--secondary-font) mb-6 text-white">CURRÍCULO</h2>
-            <p className="text-(--text-color) leading-relaxed mb-6">
+          <div class="text-left">
+            <h2 class="text-3xl md:text-4xl font-(family-name:--secondary-font) mb-4 text-white">CURRÍCULO</h2>
+            <p class="text-(--text-color) leading-relaxed mb-4 text-sm">
               Baixe meu currículo atualizado ou visualize online.
             </p>
-            <div className="flex gap-4 justify-center">
-              <button className="px-6 py-2 bg-white/20 rounded-full hover:bg-white/30 transition-colors text-(--text-color)">
+            <div class="flex gap-3">
+              <button class="px-4 py-2 bg-black/30 rounded hover:bg-black/40 transition-colors text-(--text-color) text-sm">
                 Download PDF
-              </button>
-              <button className="px-6 py-2 bg-white/20 rounded-full hover:bg-white/30 transition-colors text-(--text-color)">
-                Visualizar Online
               </button>
             </div>
           </div>
         )
+        
       default:
         return null
     }
@@ -80,45 +81,41 @@ function FooterNav() {
 
   return (
     <>
-      {/* Bottom Menu */}
-      <nav className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50">
-        {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-6 px-8 py-4 rounded-full backdrop-blur-md bg-white/10 border border-white/20 shadow-lg transition-opacity duration-300 hover:opacity-90">
+      <nav class="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50">
+
+        <div class="hidden md:flex items-center gap-4 px-6 py-3 rounded-lg backdrop-blur-lg bg-black/40 border border-gray-700/50 shadow-xl">
           {menuItems.map((item, index) => (
             <button
               key={index}
               onClick={(e) => handleMenuClick(e, item.id)}
-              className="text-(--text-color) text-sm font-(family-name:--main-font) tracking-wider hover:text-white transition-colors duration-300 cursor-pointer"
+              class="text-(--text-color) text-xs font-(family-name:--main-font) tracking-wide hover:text-white transition-colors duration-200 px-3 py-1 rounded hover:bg-white/10"
             >
               {item.name}
             </button>
           ))}
         </div>
 
-        {/* Mobile Menu */}
-        <div className="md:hidden">
-          {/* Menu Button */}
+        <div class="md:hidden">
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="px-6 py-3 rounded-full backdrop-blur-md bg-white/10 border border-white/20 shadow-lg text-(--text-color) font-(family-name:--main-font) text-sm tracking-wider transition-all duration-300 hover:bg-white/15"
+            class="px-5 py-2 rounded-lg backdrop-blur-lg bg-black/40 border border-gray-700/50 shadow-xl text-(--text-color) font-(family-name:--main-font) text-xs tracking-wide transition-all duration-200 hover:bg-black/50"
           >
             MENU
           </button>
 
-          {/* Expanded Menu Items */}
           <div
-            className={`absolute bottom-16 left-1/2 transform -translate-x-1/2 transition-all duration-300 ${
+            class={`absolute bottom-12 left-1/2 transform -translate-x-1/2 transition-all duration-200 ${
               isMenuOpen 
                 ? 'opacity-100 translate-y-0 pointer-events-auto' 
-                : 'opacity-0 translate-y-4 pointer-events-none'
+                : 'opacity-0 translate-y-2 pointer-events-none'
             }`}
           >
-            <div className="flex flex-col gap-3 p-4 rounded-2xl backdrop-blur-md bg-white/10 border border-white/20 shadow-lg min-w-32">
+            <div class="flex flex-col gap-2 p-4 rounded-lg backdrop-blur-lg bg-black/40 border border-gray-700/50 shadow-xl min-w-28">
               {menuItems.map((item, index) => (
                 <button
                   key={index}
                   onClick={(e) => handleMenuClick(e, item.id)}
-                  className="text-(--text-color) text-sm font-(family-name:--main-font) tracking-wider hover:text-white transition-colors duration-300 cursor-pointer text-center py-2"
+                  class="text-(--text-color) text-xs font-(family-name:--main-font) tracking-wide hover:text-white transition-colors duration-200 text-center py-2 px-3 rounded hover:bg-white/10"
                 >
                   {item.name}
                 </button>
@@ -126,36 +123,32 @@ function FooterNav() {
             </div>
           </div>
 
-          {/* Backdrop for closing menu */}
           {isMenuOpen && (
             <div
-              className="fixed inset-0 -z-10"
+              class="fixed inset-0 -z-10"
               onClick={() => setIsMenuOpen(false)}
             />
           )}
         </div>
       </nav>
 
-      {/* Modal */}
       {activeModal && (
-        <div className="fixed inset-0 z-[60] flex items-center justify-center p-4">
-          {/* Modal Backdrop */}
+        <div class="fixed inset-0 z-[60] flex items-center justify-center p-4">
           <div
-            className="absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300"
+            class="absolute inset-0 bg-black/60 backdrop-blur-sm"
             onClick={closeModal}
           />
           
-          {/* Modal Content */}
-          <div className="relative max-w-lg w-full mx-4 p-8 rounded-2xl backdrop-blur-md bg-white/10 border border-white/20 shadow-2xl transition-all duration-300 transform">
-            {/* Close Button */}
+          <div class="relative max-w-md w-full p-6 rounded-lg backdrop-blur-lg bg-black/50 border border-gray-600/50 shadow-2xl">
+            {/* Botão de fechar */}
             <button
               onClick={closeModal}
-              className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/30 transition-colors text-(--text-color) text-xl"
+              class="absolute top-3 right-3 w-6 h-6 flex items-center justify-center rounded bg-black/40 hover:bg-black/60 transition-colors text-(--text-color) text-sm"
             >
-              ×
+              x
             </button>
 
-            {/* Modal Content */}
+            {/* Conteúdo específico da modal */}
             {renderModalContent()}
           </div>
         </div>
