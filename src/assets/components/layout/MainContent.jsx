@@ -13,7 +13,7 @@ function MainContent() {
                 class="w-50 mb-2 text-[14px]">PRAZER, ME CHAMO</p>
 
             <p className="dev-name font-(family-name:--secondary-font) text-7xl md:text-8xl">NATHAN MONTEIRO</p>
-            <p className="dev-info md:text-[20px]">Desenvolvedor Frontend</p>
+            <p className="dev-info md:text-[20px]">Desenvolvedor Frontend.</p>
         </div>
 
         <FooterNav />

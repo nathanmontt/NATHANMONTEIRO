@@ -83,22 +83,24 @@ function FooterNav() {
     <>
       <nav class="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50">
 
+        {/* Botão de menu e transições */}
         <div class="hidden md:flex items-center gap-4 px-6 py-3 rounded-lg backdrop-blur-lg bg-black/40 border border-gray-700/50 shadow-xl">
           {menuItems.map((item, index) => (
             <button
               key={index}
               onClick={(e) => handleMenuClick(e, item.id)}
-              class="text-(--text-color) text-xs font-(family-name:--main-font) tracking-wide hover:text-white transition-colors duration-200 px-3 py-1 rounded hover:bg-white/10"
+              class="text-(--text-color) text-xs font-(family-name:--main-font) hover:font-bold transition-all duration-200 cursor-pointer"
             >
               {item.name}
             </button>
           ))}
         </div>
 
+        {/* Botão de menu responsivo (aparecimento do menu quando clicado) */}
         <div class="md:hidden">
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            class="px-5 py-2 rounded-lg backdrop-blur-lg bg-black/40 border border-gray-700/50 shadow-xl text-(--text-color) font-(family-name:--main-font) text-xs tracking-wide transition-all duration-200 hover:bg-black/50"
+            class="pr-6 pl-6 pt-2 pb-2 rounded-lg backdrop-blur-lg bg-black/40 border border-gray-700/50 text-(--text-color) font-(family-name:--main-font) text-xs transition-all duration-500 hover:bg-black/60 cursor-pointer"
           >
             MENU
           </button>
@@ -115,7 +117,7 @@ function FooterNav() {
                 <button
                   key={index}
                   onClick={(e) => handleMenuClick(e, item.id)}
-                  class="text-(--text-color) text-xs font-(family-name:--main-font) tracking-wide hover:text-white transition-colors duration-200 text-center py-2 px-3 rounded hover:bg-white/10"
+                  class="text-(--text-color) text-xs font-(family-name:--main-font) hover:text-white duration-200 text-center py-2 px-3 rounded hover:font-bold transition-all  cursor-pointer"
                 >
                   {item.name}
                 </button>
@@ -143,7 +145,7 @@ function FooterNav() {
             {/* Botão de fechar */}
             <button
               onClick={closeModal}
-              class="absolute top-3 right-3 w-6 h-6 flex items-center justify-center rounded bg-black/40 hover:bg-black/60 transition-colors text-(--text-color) text-sm"
+              class="absolute top-3 right-3 w-6 h-6 flex items-center justify-center rounded bg-black/40 hover:bg-black/60 transition-colors text-(--text-color) text-sm cursor-pointer"
             >
               x
             </button>
