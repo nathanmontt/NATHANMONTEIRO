@@ -3,13 +3,68 @@ import { useState } from 'react'
 function FooterNav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeModal, setActiveModal] = useState(null)
+  const [activeFilter, setActiveFilter] = useState('all') // Estado que mostra todos os projeto antes mesmo de clicarmos em uma tag específica
 
+  // Estrutura com objetos que salva informações dos projetos
+  const projectsData = [
+    { 
+      id: 1, 
+      title: "E-commerce React", 
+      description: "Loja virtual completa", 
+      tags: ["react", "javascript"],
+      className: "project-react project-javascript" 
+    },
+    { 
+      id: 2, 
+      title: "Dashboard Vue", 
+      description: "Painel administrativo", 
+      tags: ["vue", "javascript"],
+      className: "project-vue project-javascript" 
+    },
+    { 
+      id: 3, 
+      title: "Landing Page React", 
+      description: "Site institucional", 
+      tags: ["react"],
+      className: "project-react" 
+    },
+    { 
+      id: 4, 
+      title: "App Vue", 
+      description: "Aplicativo web", 
+      tags: ["vue"],
+      className: "project-vue" 
+    },
+    { 
+      id: 5, 
+      title: "Jogo JavaScript", 
+      description: "Game em vanilla JS", 
+      tags: ["javascript"],
+      className: "project-javascript" 
+    }
+  ]
+
+  // Função de arrays para salvar os estados das opções do menu
   const menuItems = [
     { name: 'SOBRE', id: 'sobre' },
     { name: 'PROJETOS', id: 'projetos' },
     { name: 'CURRÍCULO', id: 'curriculo' },
     { name: 'CONTATO', id: 'contato' },
   ]
+
+  // Função que filtra os projetos
+  const getFilteredProjects = () => {
+    if (activeFilter === 'all') {
+      return projectsData // Retorna todos os projetos
+    }
+    else {
+      return projectsData.filter(project => project.tags.includes(activeFilter)) // Filtra por tag
+    }
+  }
+
+  const handleFilterClick = (tag) => {
+    setActiveFilter(tag) // Atualiza o filtro ativo
+  }
 
   const handleMenuClick = (e, itemId) => {
     e.preventDefault()
@@ -39,10 +94,71 @@ function FooterNav() {
       case 'projetos':
         return (
           <div className="container-projects">
-            <h2 class="text-3xl md:text-4xl font-(family-name:--secondary-font) mb-4 text-white">PROJETOS</h2>
-            <p class="text-(--text-color) leading-relaxed text-sm">
-              Lorem ipsum dolor sit amet. texto 1
-            </p>
+            <h2 className="text-3xl md:text-4xl font-(family-name:--secondary-font) mb-4 text-white">PROJETOS</h2>
+            
+            {/* FILTROS POR TAG */}
+            <div className="flex flex-wrap gap-2 mb-4">
+              <button 
+                onClick={() => handleFilterClick('all')}
+                className={`px-3 py-1 text-xs rounded transition-colors ${
+                  activeFilter === 'all' 
+                    ? 'bg-white/30 text-white' 
+                    : 'bg-black/20 text-(--text-color) hover:bg-black/30'
+                }`}
+              >
+                TODOS
+              </button>
+              <button 
+                onClick={() => handleFilterClick('react')}
+                className={`px-3 py-1 text-xs rounded transition-colors ${
+                  activeFilter === 'react' 
+                    ? 'bg-white/30 text-white' 
+                    : 'bg-black/20 text-(--text-color) hover:bg-black/30'
+                }`}
+              >
+                REACT
+              </button>
+              <button 
+                onClick={() => handleFilterClick('vue')}
+                className={`px-3 py-1 text-xs rounded transition-colors ${
+                  activeFilter === 'vue' 
+                    ? 'bg-white/30 text-white' 
+                    : 'bg-black/20 text-(--text-color) hover:bg-black/30'
+                }`}
+              >
+                VUE
+              </button>
+              <button 
+                onClick={() => handleFilterClick('javascript')}
+                className={`px-3 py-1 text-xs rounded transition-colors ${
+                  activeFilter === 'javascript' 
+                    ? 'bg-white/30 text-white' 
+                    : 'bg-black/20 text-(--text-color) hover:bg-black/30'
+                }`}
+              >
+                JAVASCRIPT
+              </button>
+            </div>
+
+            {/* LISTA DE PROJETOS FILTRADOS */}
+            <div className="space-y-3 max-h-60 overflow-y-auto">
+              {getFilteredProjects().map(project => (
+                <div 
+                  key={project.id} 
+                  className={`p-3 rounded bg-black/20 border border-gray-600/30 ${project.className}`}
+                >
+                  <h3 className="text-white text-sm font-bold mb-1">{project.title}</h3>
+                  <p className="text-(--text-color) text-xs">{project.description}</p>
+                  <div className="flex gap-1 mt-2">
+                    {project.tags.map(tag => (
+                      <span key={tag} className="px-2 py-1 bg-white/10 rounded text-xs text-(--text-color)">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         )
 
