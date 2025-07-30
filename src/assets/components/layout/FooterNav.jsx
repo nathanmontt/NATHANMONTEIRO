@@ -9,11 +9,11 @@ function FooterNav() {
   const projectsData = [
     { 
       id: 1, 
-      title: "E-commerce React", 
-      description: "Loja virtual completa com carrinho de compras, sistema de pagamento e gerenciamento de produtos.", 
+      title: "RISKSHOT", 
+      description: "Uma agência fotográfica que captura a adrenalina juntamente com o cliente", 
       image: "/images/ecommerce-react.jpg",
-      tags: ["react", "javascript"],
-      technologies: ["React", "JavaScript", "CSS3", "Node.js"],
+      tags: ["html", "css", "javascript", "scss"],
+      technologies: ["HTML", "CSS3", "JavaScript", "SCSS"],
       className: "project-react project-javascript",
       githubUrl: "https://github.com/usuario/ecommerce-react"
     },
@@ -120,6 +120,18 @@ function FooterNav() {
                 >
                   TODOS
                 </button>
+
+                <button 
+                  onClick={() => handleFilterClick('react')}
+                  className={`cursor-pointer px-3 py-1 text-xs rounded transition-colors whitespace-nowrap ${
+                    activeFilter === 'react' 
+                      ? 'bg-white/30 text-white' 
+                      : 'bg-black/20 text-(--text-color) hover:bg-black/30'
+                  }`}
+                >
+                  HTML
+                </button>
+
                 <button 
                   onClick={() => handleFilterClick('react')}
                   className={`cursor-pointer px-3 py-1 text-xs rounded transition-colors whitespace-nowrap ${
@@ -130,6 +142,18 @@ function FooterNav() {
                 >
                   REACT
                 </button>
+
+                <button 
+                  onClick={() => handleFilterClick('react')}
+                  className={`cursor-pointer px-3 py-1 text-xs rounded transition-colors whitespace-nowrap ${
+                    activeFilter === 'react' 
+                      ? 'bg-white/30 text-white' 
+                      : 'bg-black/20 text-(--text-color) hover:bg-black/30'
+                  }`}
+                >
+                  REACT
+                </button>
+
                 <button 
                   onClick={() => handleFilterClick('vue')}
                   className={`cursor-pointer px-3 py-1 text-xs rounded transition-colors whitespace-nowrap ${
@@ -140,6 +164,7 @@ function FooterNav() {
                 >
                   VUE
                 </button>
+
                 <button 
                   onClick={() => handleFilterClick('javascript')}
                   className={`cursor-pointer px-3 py-1 text-xs rounded transition-colors whitespace-nowrap ${
@@ -150,6 +175,7 @@ function FooterNav() {
                 >
                   JAVASCRIPT
                 </button>
+
                 {/* Você pode adicionar mais filtros aqui */}
                 <button 
                   onClick={() => handleFilterClick('css')}
@@ -161,6 +187,7 @@ function FooterNav() {
                 >
                   CSS
                 </button>
+
                 <button 
                   onClick={() => handleFilterClick('nodejs')}
                   className={`cursor-pointer px-3 py-1 text-xs rounded transition-colors whitespace-nowrap ${
@@ -171,6 +198,7 @@ function FooterNav() {
                 >
                   NODE.JS
                 </button>
+                
                 <button 
                   onClick={() => handleFilterClick('typescript')}
                   className={`cursor-pointer px-3 py-1 text-xs rounded transition-colors whitespace-nowrap ${
