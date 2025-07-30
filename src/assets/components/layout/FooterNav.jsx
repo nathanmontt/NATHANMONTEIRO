@@ -11,7 +11,7 @@ function FooterNav() {
       id: 1, 
       title: "RISKSHOT", 
       description: "Uma agência fotográfica que captura a adrenalina juntamente com o cliente", 
-      image: "/images/ecommerce-react.jpg",
+      image: "/images/riskshot.png",
       tags: ["html", "css", "javascript", "scss"],
       technologies: ["HTML", "CSS3", "JavaScript", "SCSS"],
       className: "project-react project-javascript",
@@ -214,28 +214,23 @@ function FooterNav() {
 
             {/* LISTA DE PROJETOS COM NOVO TEMPLATE */}
             <div class="space-y-4 max-h-80 overflow-y-auto custom-scrollbar pr-2">
-              {getFilteredProjects().map(project => (
-                <div 
-                  key={project.id} 
+              { getFilteredProjects().map(project => (
+                <div key={project.id} 
                   class={`project-card bg-black/20 border border-gray-600/30 rounded-lg overflow-hidden hover:bg-black/30 transition-all duration-300 ${project.class}`}
                 >
                   {/* IMAGEM DO PROJETO COM LINK PARA REPOSITÓRIO */}
                   <div class="relative h-32 bg-gray-800/50 overflow-hidden group">
-                    {project.githubUrl ? (
+                    { project.githubUrl ? (
                       // Link para o repositório GitHub
-                      <a 
-                        href={project.githubUrl} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
+                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer"
                         class="block w-full h-full relative"
                       >
-                        <img 
-                          src={project.image} 
-                          alt={project.title}
+                        <img src={project.image} alt={project.title}
                           class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
                           onError={(e) => {
-                            e.target.style.display = 'none'
-                            e.target.nextSibling.style.display = 'flex'
+                            // Função fallback para imagens que falham ao carregar
+                            e.target.style.display = 'none';  // esconde a imagem quebrada
+                            e.target.nextSibling.style.display = 'flex';  
                           }}
                         />
                         {/* Overlay que aparece no hover */}
@@ -298,7 +293,7 @@ function FooterNav() {
                     </div>
 
                     {/* BOTÃO DO REPOSITÓRIO */}
-                    {project.githubUrl && (
+                    { project.githubUrl && (
                       <div class="pt-2 border-t border-gray-600/30">
                         <a
                           href={project.githubUrl}
