@@ -14,7 +14,8 @@ function FooterNav() {
       image: "/images/ecommerce-react.jpg",
       tags: ["react", "javascript"],
       technologies: ["React", "JavaScript", "CSS3", "Node.js"],
-      className: "project-react project-javascript" 
+      className: "project-react project-javascript",
+      githubUrl: "https://github.com/usuario/ecommerce-react"
     },
     { 
       id: 2, 
@@ -23,7 +24,8 @@ function FooterNav() {
       image: "/images/dashboard-vue.jpg",
       tags: ["vue", "javascript"],
       technologies: ["Vue.js", "JavaScript", "Chart.js", "SCSS"],
-      className: "project-vue project-javascript" 
+      className: "project-vue project-javascript",
+      githubUrl: "https://github.com/usuario/ecommerce-react"
     },
     { 
       id: 3, 
@@ -32,7 +34,8 @@ function FooterNav() {
       image: "/images/landing-react.jpg",
       tags: ["react"],
       technologies: ["React", "Tailwind CSS", "Framer Motion"],
-      className: "project-react" 
+      className: "project-react",
+      githubUrl: "https://github.com/usuario/ecommerce-react"
     },
     { 
       id: 4, 
@@ -41,7 +44,8 @@ function FooterNav() {
       image: "/images/app-vue.jpg",
       tags: ["vue"],
       technologies: ["Vue.js", "Vuex", "CSS3"],
-      className: "project-vue" 
+      className: "project-vue",
+      githubUrl: "https://github.com/usuario/ecommerce-react"
     },
     { 
       id: 5, 
@@ -50,7 +54,8 @@ function FooterNav() {
       image: "/images/game-js.jpg",
       tags: ["javascript"],
       technologies: ["JavaScript", "HTML5 Canvas", "CSS3"],
-      className: "project-javascript" 
+      className: "project-javascript",
+      githubUrl: "https://github.com/usuario/ecommerce-react"
     }
   ]
 
@@ -72,9 +77,7 @@ function FooterNav() {
     }
   }
 
-  const handleFilterClick = (tag) => {
-    setActiveFilter(tag) // Atualiza o filtro ativo
-  }
+  const handleFilterClick = (tag) => { setActiveFilter(tag) }
 
   const handleMenuClick = (e, itemId) => {
     e.preventDefault()
@@ -82,9 +85,7 @@ function FooterNav() {
     setIsMenuOpen(false)
   }
 
-  const closeModal = () => {
-    setActiveModal(null)
-  }
+  const closeModal = () => { setActiveModal(null) }
 
   const renderModalContent = () => {
     switch(activeModal) {
@@ -104,105 +105,184 @@ function FooterNav() {
       case 'projetos':
         return (
           <div className="container-projects">
-            <h2 className="text-3xl md:text-4xl font-(family-name:--secondary-font) mb-4 text-white">PROJETOS</h2>
+            <h2 class="text-3xl md:text-4xl font-(family-name:--secondary-font) mb-4 text-white">PROJETOS</h2>
             
-            {/* FILTROS POR TAG */}
-            <div className="flex flex-wrap gap-2 mb-4">
-              <button 
-                onClick={() => handleFilterClick('all')}
-                className={`px-3 py-1 text-xs rounded transition-colors ${
-                  activeFilter === 'all' 
-                    ? 'bg-white/30 text-white' 
-                    : 'bg-black/20 text-(--text-color) hover:bg-black/30'
-                }`}
-              >
-                TODOS
-              </button>
-              <button 
-                onClick={() => handleFilterClick('react')}
-                className={`px-3 py-1 text-xs rounded transition-colors ${
-                  activeFilter === 'react' 
-                    ? 'bg-white/30 text-white' 
-                    : 'bg-black/20 text-(--text-color) hover:bg-black/30'
-                }`}
-              >
-                REACT
-              </button>
-              <button 
-                onClick={() => handleFilterClick('vue')}
-                className={`px-3 py-1 text-xs rounded transition-colors ${
-                  activeFilter === 'vue' 
-                    ? 'bg-white/30 text-white' 
-                    : 'bg-black/20 text-(--text-color) hover:bg-black/30'
-                }`}
-              >
-                VUE
-              </button>
-              <button 
-                onClick={() => handleFilterClick('javascript')}
-                className={`px-3 py-1 text-xs rounded transition-colors ${
-                  activeFilter === 'javascript' 
-                    ? 'bg-white/30 text-white' 
-                    : 'bg-black/20 text-(--text-color) hover:bg-black/30'
-                }`}
-              >
-                JAVASCRIPT
-              </button>
+            {/* FILTROS POR TAG - COM SCROLL HORIZONTAL */}
+            <div className="flex gap-2 mb-4 overflow-x-auto custom-scrollbar pb-2">
+              <div className="flex gap-2 min-w-max">
+                <button 
+                  onClick={() => handleFilterClick('all')}
+                  className={`cursor-pointer px-3 py-1 text-xs rounded transition-colors whitespace-nowrap ${
+                    activeFilter === 'all' 
+                      ? 'bg-white/30 text-white' 
+                      : 'bg-black/20 text-(--text-color) hover:bg-black/30'
+                  }`}
+                >
+                  TODOS
+                </button>
+                <button 
+                  onClick={() => handleFilterClick('react')}
+                  className={`cursor-pointer px-3 py-1 text-xs rounded transition-colors whitespace-nowrap ${
+                    activeFilter === 'react' 
+                      ? 'bg-white/30 text-white' 
+                      : 'bg-black/20 text-(--text-color) hover:bg-black/30'
+                  }`}
+                >
+                  REACT
+                </button>
+                <button 
+                  onClick={() => handleFilterClick('vue')}
+                  className={`cursor-pointer px-3 py-1 text-xs rounded transition-colors whitespace-nowrap ${
+                    activeFilter === 'vue' 
+                      ? 'bg-white/30 text-white' 
+                      : 'bg-black/20 text-(--text-color) hover:bg-black/30'
+                  }`}
+                >
+                  VUE
+                </button>
+                <button 
+                  onClick={() => handleFilterClick('javascript')}
+                  className={`cursor-pointer px-3 py-1 text-xs rounded transition-colors whitespace-nowrap ${
+                    activeFilter === 'javascript' 
+                      ? 'bg-white/30 text-white' 
+                      : 'bg-black/20 text-(--text-color) hover:bg-black/30'
+                  }`}
+                >
+                  JAVASCRIPT
+                </button>
+                {/* Você pode adicionar mais filtros aqui */}
+                <button 
+                  onClick={() => handleFilterClick('css')}
+                  className={`cursor-pointer px-3 py-1 text-xs rounded transition-colors whitespace-nowrap ${
+                    activeFilter === 'css' 
+                      ? 'bg-white/30 text-white' 
+                      : 'bg-black/20 text-(--text-color) hover:bg-black/30'
+                  }`}
+                >
+                  CSS
+                </button>
+                <button 
+                  onClick={() => handleFilterClick('nodejs')}
+                  className={`cursor-pointer px-3 py-1 text-xs rounded transition-colors whitespace-nowrap ${
+                    activeFilter === 'nodejs' 
+                      ? 'bg-white/30 text-white' 
+                      : 'bg-black/20 text-(--text-color) hover:bg-black/30'
+                  }`}
+                >
+                  NODE.JS
+                </button>
+                <button 
+                  onClick={() => handleFilterClick('typescript')}
+                  className={`cursor-pointer px-3 py-1 text-xs rounded transition-colors whitespace-nowrap ${
+                    activeFilter === 'typescript' 
+                      ? 'bg-white/30 text-white' 
+                      : 'bg-black/20 text-(--text-color) hover:bg-black/30'
+                  }`}
+                >
+                  TYPESCRIPT
+                </button>
+              </div>
             </div>
 
             {/* LISTA DE PROJETOS COM NOVO TEMPLATE */}
-            <div className="space-y-4 max-h-80 overflow-y-auto custom-scrollbar pr-2">
+            <div class="space-y-4 max-h-80 overflow-y-auto custom-scrollbar pr-2">
               {getFilteredProjects().map(project => (
                 <div 
                   key={project.id} 
-                  className={`project-card bg-black/20 border border-gray-600/30 rounded-lg overflow-hidden hover:bg-black/30 transition-all duration-300 ${project.className}`}
+                  class={`project-card bg-black/20 border border-gray-600/30 rounded-lg overflow-hidden hover:bg-black/30 transition-all duration-300 ${project.class}`}
                 >
-                  {/* IMAGEM DO PROJETO */}
-                  <div className="relative h-32 bg-gray-800/50 overflow-hidden">
-                    <img 
-                      src={project.image} 
-                      alt={project.title}
-                      className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-300"
-                      onError={(e) => {
-                        // Fallback caso a imagem não carregue
-                        e.target.style.display = 'none'
-                        e.target.nextSibling.style.display = 'flex'
-                      }}
-                    />
-                    {/* Fallback para quando não há imagem */}
-                    <div className="absolute inset-0 bg-gray-700/50 hidden items-center justify-center">
-                      <span className="text-(--text-color) text-xs">Sem imagem</span>
-                    </div>
+                  {/* IMAGEM DO PROJETO COM LINK PARA REPOSITÓRIO */}
+                  <div class="relative h-32 bg-gray-800/50 overflow-hidden group">
+                    {project.githubUrl ? (
+                      // Link para o repositório GitHub
+                      <a 
+                        href={project.githubUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        class="block w-full h-full relative"
+                      >
+                        <img 
+                          src={project.image} 
+                          alt={project.title}
+                          class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                          onError={(e) => {
+                            e.target.style.display = 'none'
+                            e.target.nextSibling.style.display = 'flex'
+                          }}
+                        />
+                        {/* Overlay que aparece no hover */}
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                          <span class="text-white text-xs font-bold bg-black/70 px-3 py-1 rounded">
+                            💻 VER CÓDIGO
+                          </span>
+                        </div>
+                        {/* Fallback para quando não há imagem */}
+                        <div class="absolute inset-0 bg-gray-700/50 hidden items-center justify-center">
+                          <span class="text-(--text-color) text-xs">Sem imagem</span>
+                        </div>
+                      </a>
+                    ) : (
+                      // Caso não tenha repositório, só mostra a imagem
+                      <>
+                        <img 
+                          src={project.image} 
+                          alt={project.title}
+                          class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-300"
+                          onError={(e) => {
+                            e.target.style.display = 'none'
+                            e.target.nextSibling.style.display = 'flex'
+                          }}
+                        />
+                        <div class="absolute inset-0 bg-gray-700/50 hidden items-center justify-center">
+                          <span class="text-(--text-color) text-xs">Sem imagem</span>
+                        </div>
+                      </>
+                    )}
                   </div>
 
                   {/* CONTEÚDO DO PROJETO */}
-                  <div className="p-4">
+                  <div class="p-4">
                     {/* TÍTULO */}
-                    <h3 className="text-white text-sm font-bold mb-2 font-(family-name:--main-font)">
+                    <h3 class="text-white text-sm font-bold mb-2 font-(family-name:--main-font)">
                       {project.title}
                     </h3>
 
                     {/* DESCRIÇÃO */}
-                    <p className="text-(--text-color) text-xs leading-relaxed mb-3">
+                    <p class="text-(--text-color) text-xs leading-relaxed mb-3">
                       {project.description}
                     </p>
 
                     {/* LINGUAGENS/TECNOLOGIAS */}
-                    <div className="space-y-2">
-                      <span className="text-(--text-color) text-xs font-medium block">
+                    <div class="space-y-2 mb-3">
+                      <span class="text-(--text-color) text-xs font-medium block">
                         Tecnologias:
                       </span>
-                      <div className="flex flex-wrap gap-1">
+                      <div class="flex flex-wrap gap-1">
                         {project.technologies.map((tech, index) => (
                           <span 
                             key={index} 
-                            className="px-2 py-1 bg-white/10 rounded text-xs text-(--text-color) border border-white/20"
+                            class="px-2 py-1 bg-white/10 rounded text-xs text-(--text-color) border border-white/20"
                           >
                             {tech}
                           </span>
                         ))}
                       </div>
                     </div>
+
+                    {/* BOTÃO DO REPOSITÓRIO */}
+                    {project.githubUrl && (
+                      <div class="pt-2 border-t border-gray-600/30">
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="w-full flex items-center justify-center gap-2 px-3 py-2 bg-gray-600/30 hover:bg-gray-600/50 border border-gray-500/30 rounded text-xs text-(--text-color) transition-colors duration-200"
+                        >
+                          <span>💻</span>
+                          <span>VER NO GITHUB</span>
+                        </a>
+                      </div>
+                    )}
                   </div>
                 </div>
               ))}
