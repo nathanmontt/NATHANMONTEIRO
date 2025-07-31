@@ -1,6 +1,7 @@
 function ProjectCard({ project }) {
   return (
-    <div className={`project-card bg-black/20 border border-gray-600/30 rounded-lg overflow-hidden hover:bg-black/30 transition-all duration-300 ${project.className}`}>
+    <div class="project-card bg-black/20 border border-gray-600/30 rounded-lg overflow-hidden hover:bg-black/30 transition-all duration-300"
+    className={project.className}>
       {/* IMAGEM DO PROJETO */}
       <div className="relative h-32 bg-gray-800/50 overflow-hidden group">
         {project.githubUrl ? (
