@@ -1,7 +1,6 @@
 import AboutSection from './sections/AboutSection'
 import ProjectsSection from './sections/ProjectsSection'
 import ContactSection from './sections/ContactSection'
-import CurriculumSection from './sections/CurriculumSection'
 
 function ModalContent({ activeModal }) {
   const renderContent = () => {
@@ -12,8 +11,6 @@ function ModalContent({ activeModal }) {
         return <ProjectsSection />
       case 'contato':
         return <ContactSection />
-      case 'curriculo':
-        return <CurriculumSection />
       default:
         return null
     }
