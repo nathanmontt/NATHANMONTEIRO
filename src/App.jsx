@@ -1,5 +1,4 @@
-import '../src/assets/styles/global.css'
-import FooterNav from './assets/components/layout/FooterNav'
+import './assets/styles/global.css'
 import MainContent from './assets/components/layout/MainContent'
 
 function App() {
