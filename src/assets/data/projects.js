@@ -139,4 +139,24 @@ export const projectsData = [
     className: "project-html project-css project-javascript project-scss",
     githubUrl: "https://digital-clock-rouge-ten.vercel.app/"
   },
+  { 
+    id: 15, 
+    title: "TODO List", 
+    description: "Um projeto feito para testar minhas habilidades em JavaScript", 
+    image: "/images/todo-list.png",
+    tags: ["html", "css", "javascript", "scss"],
+    technologies: ["HTML", "CSS3", "JavaScript", "SCSS"],
+    className: "project-html project-css project-javascript project-scss",
+    githubUrl: "https://todo-list-orpin-five.vercel.app/"
+  },
+  { 
+    id: 16, 
+    title: "Advice.me", 
+    description: "Um projeto feito para tentar entender mais sobre o consumo de API's", 
+    image: "/images/advice-me.png",
+    tags: ["html", "css", "javascript", "scss"],
+    technologies: ["HTML", "CSS3", "JavaScript", "SCSS"],
+    className: "project-html project-css project-javascript project-scss",
+    githubUrl: "https://advice-me-sand.vercel.app/"
+  },
 ]
