@@ -2,32 +2,32 @@ export const projectsData = [
   { 
     id: 1, 
     title: "RISKSHOT", 
-    description: "Uma agência fotográfica que captura a adrenalina juntamente com o cliente", 
+    description: "Uma agência fotográfica que captura a adrenalina juntamente com o cliente.", 
     image: "/images/riskshot.png",
     tags: ["html", "css", "javascript", "scss"],
     technologies: ["HTML", "CSS3", "JavaScript", "SCSS"],
     className: "project-html project-css project-javascript project-scss",
-    githubUrl: "https://github.com/usuario/riskshot"
+    githubUrl: "https://riskshot.vercel.app/"
   },
   { 
     id: 2, 
-    title: "Dashboard Vue", 
-    description: "Painel administrativo com gráficos interativos e controle de usuários.", 
-    image: "/images/dashboard-vue.jpg",
-    tags: ["vue", "javascript"],
-    technologies: ["Vue.js", "JavaScript", "Chart.js", "SCSS"],
-    className: "project-vue project-javascript",
-    githubUrl: "https://github.com/usuario/dashboard-vue"
+    title: "FLASH", 
+    description: "Uma loja e-commerce com um senso de moda ousado. Seu estilo, nossa confecção (projeto incompleto).", 
+    image: "/images/flash.png",
+    tags: ["html", "css", "javascript", "scss"],
+    technologies: ["HTML", "CSS3", "JavaScript", "SCSS"],
+    className: "project-html project-css project-javascript project-scss",
+    githubUrl: "https://flashcostore.vercel.app/"
   },
   { 
     id: 3, 
-    title: "Landing Page React", 
-    description: "Site institucional responsivo com animações suaves e design moderno.", 
-    image: "/images/landing-react.jpg",
-    tags: ["react"],
-    technologies: ["React", "Tailwind CSS", "Framer Motion"],
-    className: "project-react",
-    githubUrl: "https://github.com/usuario/landing-react"
+    title: "Single Page CV", 
+    description: "RFEP-Single-Page-CV, como é o nome do repositório, é um projeto de Frontend, trago pelo site roadmap.sh, onde o objetivo é montar um currículo em uma página em HTML e CSS.", 
+    image: "",
+    tags: ["html", "css"],
+    technologies: ["HTML", "CSS3"],
+    className: "project-html project-css",
+    githubUrl: "https://github.com/nathanmontt/RFEP-Single-Page-CV"
   },
   { 
     id: 4, 
