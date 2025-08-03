@@ -21,98 +21,8 @@ export const projectsData = [
   },
   { 
     id: 3, 
-    title: "Single Page CV", 
-    description: "RFEP-Single-Page-CV, como é o nome do repositório, é um projeto de Frontend, trago pelo site roadmap.sh, onde o objetivo é montar um currículo em uma página em HTML e CSS.", 
-    image: "/",
-    tags: ["html", "css"],
-    technologies: ["HTML", "CSS3"],
-    className: "project-html project-css",
-    githubUrl: "https://github.com/nathanmontt/RFEP-Single-Page-CV",
-  },
-  { 
-    id: 4, 
-    title: "Basic HTML", 
-    description: "RFEP-Basic-HTML, como é o nome do repositório, é um projeto de Frontend, trago pelo site roadmap.sh, onde o objetivo é montar um website em uma página em HTML e CSS.", 
-    image: "/",
-    tags: ["html", "css"],
-    technologies: ["HTML", "CSS3"],
-    className: "project-html project-css",
-    githubUrl: "https://github.com/nathanmontt/RFEP-Basic-HTML",
-  },
-  { 
-    id: 5, 
-    title: "Changelog Component", 
-    description: "RFEP-Changelog-Component, como é o nome do repositório, é um projeto de Frontend, trago pelo site roadmap.sh, onde o objetivo é montar um changelog component. Um Changelog seria um log ou um tracking de todas as mudanças que aconteceram dentro de um projeto/software.", 
-    image: "/",
-    tags: ["html", "css"],
-    technologies: ["HTML", "CSS3"],
-    className: "project-html project-css",
-    githubUrl: "https://github.com/nathanmontt/RFEP-Changelog-Component",
-  },
-  { 
-    id: 6, 
-    title: "Testimonial Cards", 
-    description: "RFEP-Testimonial-Cards, como é o nome do repositório, é um projeto de Frontend, trago pelo site roadmap.sh, onde o objetivo é montar, como o próprio nome já diz, um testimonial card. A ideia por trás dele é entender como funciona a questão de posicionamento, de displays em CSS, além de outros conceitos.", 
-    image: "/",
-    tags: ["html", "css"],
-    technologies: ["HTML", "CSS3"],
-    className: "project-html project-css",
-    githubUrl: "https://github.com/nathanmontt/RFEP-Testimonial-Cards"
-  },
-  { 
-    id: 7, 
-    title: "Datepicker", 
-    description: "RFEP-Datepicker, como é o nome do repositório, é um projeto de Frontend, trago pelo site roadmap.sh, onde o objetivo é montar um datepicker, nesse caso, um calendário (projeto incompleto).", 
-    image: "/",
-    tags: ["html", "css"],
-    technologies: ["HTML", "CSS3"],
-    className: "project-html project-css",
-    githubUrl: "https://github.com/nathanmontt/RFEP-Datepicker"
-  },
-  { 
-    id: 8, 
-    title: "Accessible Form UI", 
-    description: "RFEP-Accessible-Form-UI, como é o nome do repositório, é um projeto de Frontend, trago pelo site roadmap.sh, onde o objetivo é criar um formulário acessível aos usuários.", 
-    image: "/",
-    tags: ["html", "css"],
-    technologies: ["HTML", "CSS3"],
-    className: "project-html project-css",
-    githubUrl: "https://github.com/nathanmontt/RFEP-Accessible-Form-UI"
-  },
-  { 
-    id: 9, 
-    title: "Image Grid Layout", 
-    description: "RFEP-Image-Grid-Layout, como é o nome do repositório, é um projeto de Frontend, trago pelo site roadmap.sh, onde o objetivo é criar uma galeria de imagens, já fornecidas, com o layout grid.", 
-    image: "/",
-    tags: ["html", "css"],
-    technologies: ["HTML", "CSS3"],
-    className: "project-html project-css",
-    githubUrl: "https://github.com/nathanmontt/RFEP-Image-Grid-Layout"
-  },
-  { 
-    id: 10, 
-    title: "Tooltip UI", 
-    description: "RFEP-Tooltip-UI, como é o nome do repositório, é um projeto de Frontend, trago pelo site roadmap.sh, onde o objetivo é criar uma tooltip, que são pequenas dicas que ajudam ao usuário descobrir o que tal item faz. Nesse caso, será implementado com hover.", 
-    image: "/",
-    tags: ["html", "css"],
-    technologies: ["HTML", "CSS3"],
-    className: "project-html project-css",
-    githubUrl: "https://github.com/nathanmontt/RFEP-Tooltip-UI"
-  },
-  { 
-    id: 11, 
-    title: "Tabs", 
-    description: "RFEP-Tabs, como é o nome do repositório, é um projeto de Frontend, trago pelo site roadmap.sh, onde o objetivo é introduzir o estudo de Javascript. Mais especificamente com DOM, criando uma tab.", 
-    image: "/",
-    tags: ["html", "css", "javascript"],
-    technologies: ["HTML", "CSS3", "JavaScript"],
-    className: "project-html project-css project-javascript",
-    githubUrl: "https://github.com/nathanmontt/RFEP-Tabs"
-  },
-  { 
-    id: 12, 
     title: "M³", 
-    description: "M³: um guia diário nos seus estudos (projeto incompleto)", 
+    description: "M³: um guia diário nos seus estudos (projeto incompleto).", 
     image: "/images/mmm.png",
     tags: ["html", "css", "javascript", "scss"],
     technologies: ["HTML", "CSS3", "JavaScript", "SCSS"],
@@ -120,29 +30,9 @@ export const projectsData = [
     githubUrl: "https://mmm-tracking.vercel.app/"
   },
   { 
-    id: 13, 
-    title: "JSZH - JavaScript: Zero to Hero", 
-    description: "JSZH: um guia nos meus estudos (mais um) para Javascript (projeto incompleto).", 
-    image: "/images/jszh.png",
-    tags: ["html", "css", "javascript", "scss"],
-    technologies: ["HTML", "CSS3", "JavaScript", "SCSS"],
-    className: "project-html project-css project-javascript project-scss",
-    githubUrl: "https://jszh.vercel.app/"
-  },
-  { 
-    id: 14, 
-    title: "Digital Clock", 
-    description: "Um projeto inspirado no canal Bro Code", 
-    image: "/images/digital-clock.png",
-    tags: ["html", "css", "javascript", "scss"],
-    technologies: ["HTML", "CSS3", "JavaScript", "SCSS"],
-    className: "project-html project-css project-javascript project-scss",
-    githubUrl: "https://digital-clock-rouge-ten.vercel.app/"
-  },
-  { 
-    id: 15, 
+    id: 4, 
     title: "TODO List", 
-    description: "Um projeto feito para testar minhas habilidades em JavaScript", 
+    description: "Um projeto feito para testar minhas habilidades em JavaScript.", 
     image: "/images/todo-list.png",
     tags: ["html", "css", "javascript", "scss"],
     technologies: ["HTML", "CSS3", "JavaScript", "SCSS"],
@@ -150,13 +40,53 @@ export const projectsData = [
     githubUrl: "https://todo-list-orpin-five.vercel.app/"
   },
   { 
-    id: 16, 
+    id: 5, 
     title: "Advice.me", 
-    description: "Um projeto feito para tentar entender mais sobre o consumo de API's", 
+    description: "Um projeto feito para tentar entender mais sobre o consumo de API's.", 
     image: "/images/advice-me.png",
     tags: ["html", "css", "javascript", "scss"],
     technologies: ["HTML", "CSS3", "JavaScript", "SCSS"],
     className: "project-html project-css project-javascript project-scss",
     githubUrl: "https://advice-me-sand.vercel.app/"
+  },
+  { 
+    id: 6, 
+    title: "WheatherApp", 
+    description: "Projeto de JavaScript do canal Bro Code.", 
+    image: "/images/wheatherapp.png",
+    tags: ["html", "css", "javascript"],
+    technologies: ["HTML", "CSS3", "JavaScript"],
+    className: "project-html project-css project-javascript",
+    githubUrl: "https://weatherapp-liart-psi.vercel.app/"
+  },
+  { 
+    id: 7, 
+    title: "EXPLR", 
+    description: "Each day, a new experience.", 
+    image: "/",
+    tags: ["html", "scss", "javascript", "vue"],
+    technologies: ["HTML", "SCSS", "JavaScript", "Vue"],
+    className: "project-html project-scss project-javascript project-vue",
+    githubUrl: "https://github.com/nathanmontt/EXPLR"
+  },
+  { 
+    id: 8, 
+    title: "THEPEOPLE", 
+    description: "To The People, for The People.", 
+    image: "/images/thepeople.png",
+    tags: ["html", "css3", "javascript", "vue"],
+    technologies: ["HTML", "CSS3", "JavaScript", "Vue"],
+    className: "project-html project-css project-javascript project-vue",
+    githubUrl: "https://thepeople-landing-page.vercel.app/"
+  },
+  { 
+    id: 9, 
+    title: "HANDLE", 
+    description: "A fashion experiment.", 
+    image: "/images/handle.png",
+    tags: ["html", "css", "react"],
+    technologies: ["HTML", "CSS3", "React"],
+    className: "project-html project-css project-react",
+    githubUrl: "https://handle-roan.vercel.app/"
   },
 ]
