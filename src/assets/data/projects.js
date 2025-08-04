@@ -84,9 +84,9 @@ export const projectsData = [
     title: "HANDLE", 
     description: "A fashion experiment.", 
     image: "/images/handle.png",
-    tags: ["html", "css", "react"],
-    technologies: ["HTML", "CSS3", "React"],
-    className: "project-html project-css project-react",
+    tags: ["html", "tailwindcss", "react"],
+    technologies: ["HTML", "TailwindCSS", "React"],
+    className: "project-html project-css project-tailwind project-react",
     githubUrl: "https://handle-roan.vercel.app/"
   },
 ]
