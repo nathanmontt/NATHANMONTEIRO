@@ -1,10 +1,10 @@
 import './assets/styles/global.css'
-import MainContent from './assets/components/layout/MainContent'
+import Header from './assets/components/layout/Header'
 
 function App() {
   return (
     <>
-      <MainContent />
+      <Header />
     </>
   )
 }
