@@ -5,11 +5,12 @@ import BottomRightContent from './assets/components/layout/BottomRightContent'
 function App() {
   return (
     <>
-      <div id="container-flex"
-      className=''>
+      <div id="container-flex">
         <TopLeftContent />
-        <BottomRightContent />
+        {/* <BottomRightContent /> */}
       </div>
+
+      yrdyr
     </>
   )
 }

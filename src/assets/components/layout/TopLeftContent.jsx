@@ -1,37 +1,33 @@
+import Github from "../icons/Github"
+import Linkedin from "../icons/Linkedin"
+
 function TopLeftContent() {
     return (
         <div id="container-top-left-content"
-            className="p-10">
+            className="pt-[3em] pr-[3em] pl-[3em]">
             <div id="container-texts-info">
-                <p id="dev-name">Nathan Monteiro</p>
-                <p id="dev-ocupation">Smart Hiring Associate (Junior SDR) at <a href="" rel="noreferrer noopener nofollow" target="_blank">Grilo</a></p>
-            </div>
+                <p id="dev-name"
+                    className="text-[1.5em] font-semibold">
+                        Nathan Monteiro
+                </p>
 
-            <div id="container-text-about">
-                <p id="dev-about">
-                Graduando em Sistemas de Informação pela Universidade Federal de Viçosa, campus Rio Paranaíba (UFV-CRP), com foco em desenvolvimento frontend e análise de dados. Possuo experiência prática em desenvolvimento front-end e mentoria de novos programadores, atuando tanto em projetos próprios quanto no ambiente de startups.
-
-                Atualmente, dedico-me a dois projetos principais: como fundador da devStart, uma iniciativa voluntária, onde guio e mentoro mais de 30 programadores iniciantes em sua jornada no desenvolvimento web (HTML, CSS, JS, entre outros), e paralelamente, atuo como Smart Hiring Associate (Junior SDR) na Grilo, onde aplico uma abordagem analítica para enriquecer listas de prospecção (MQLs) e otimizar processos de recrutamento, além de prospectar leads para a empresa.
-
-                Habilidades e ferramentas:
-                Front-end: HTML | CSS | JavaScript | React | Vue | Tailwind CSS | Sass
-                Ferramentas e Outros: Git | GitHub | npm | Análise de Dados | Excel
-
-                Conquistas e destaques:
-                - Idealizei e estruturei do zero a devStart, uma comunidade que hoje apoia mais de 30 novos talentos a ingressarem na área de tecnologia;
-                - Desenvolvi uma trilha de aprendizado e mentoro diretamente os membros em projetos práticos, contribuindo para a construção de seus primeiros portfólios;
-
-                Objetivo Profissional:
-                Busco uma oportunidade como Desenvolvedor Front-End ou em áreas correlatas que me permitam aplicar minhas habilidades técnicas na criação de interfaces de alta qualidade e, ao mesmo tempo, utilizar meus conhecimentos em Análise de Dados, área que possuo grande apreço, para embasar decisões de produto e otimizar a experiência do usuário, buscando sempre aprender, colaborar e gerar valor para o negócio.
+                <p id="dev-ocupation"
+                    className="text-[.9em] font-light">
+                    S.H.A (Junior SDR) at <a href="https://grilo.com.br" rel="noreferrer noopener nofollow" target="_blank">Grilo</a>
                 </p>
             </div>
 
-            <div id="container-xp">
-                Colocar minhas experiências aqui
+            <div id="container-text-about">
+                <div className="dev-about">
+                    <p>
+                        Entusiasta em <span className="font-semibold">Desenvolvimento Frontend</span> (<em>ainda no básico</em>) e em <span className="font-semibold">Análise de Dados</span> (<em>mais básico ainda</em>). Possuo experiência prática em desenvolvimento e mentoria de novos programadores, atuando tanto em projetos próprios quanto no ambiente de startups. Atuo como <span className="font-semibold">Smart Hiring Associate (Junior SDR)</span> na Grilo, e como <span className="font-semibold">CEO e CTO</span> da <a href="https://devstart-project.vercel.app/" rel="noreferrer noopener nofollow" target="_blank">devStart();</a>, uma iniciativa voluntária, onde guio e mentoro mais de 30 programadores iniciantes em sua jornada no desenvolvimento web.
+                    </p>
+                </div>
             </div>
 
             <div id="container-social-icons">
-                Colocar github e linkedin
+                <Github />
+                <Linkedin />
             </div>
 
             <div id="container-who-made">
