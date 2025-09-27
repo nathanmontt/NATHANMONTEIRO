@@ -7,10 +7,8 @@ function App() {
     <>
       <div id="container-flex">
         <TopLeftContent />
-        {/* <BottomRightContent /> */}
+        <BottomRightContent />
       </div>
-
-      yrdyr
     </>
   )
 }
