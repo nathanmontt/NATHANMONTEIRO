@@ -3,12 +3,12 @@
 
 @import "tailwindcss";
 
-@theme {
-    --main-font: "Roboto Condensed", sans-serif;
-    --secondary-font: "Bebas Neue", sans-serif;
+:root {
+  --main-font: "Roboto Condensed", sans-serif;
+  --secondary-font: "Bebas Neue", sans-serif;
 
-    --main-bg-color: #1E201E;
-    --text-color: #EBD3F8;
+  --main-bg-color: #1E201E;
+  --text-color: #EBD3F8;
 }
 
 /* SCROLLBAR PERSONALIZADA */
@@ -38,4 +38,32 @@
 /* Remove setas da scrollbar */
 .custom-scrollbar::-webkit-scrollbar-button {
   display: none;
+}
+
+/* Carousel track: usamos o atributo data-index no container para controlar o translateX via seletores */
+.carousel-track {
+  width: 300%; /* sufficiente para 3 slides; em caso de mais slides, o flex garante o tamanho */
+}
+
+/* Quando o container tiver data-index, movemos a trilha usando translateX porcentual */
+/* mobile-first: aplica o carousel em telas pequenas */
+#container-bottom-right-content[data-index="0"] .carousel-track {
+  transform: translateX(0%);
+}
+
+#container-bottom-right-content[data-index="1"] .carousel-track {
+  transform: translateX(-33.3333%);
+}
+
+#container-bottom-right-content[data-index="2"] .carousel-track {
+  transform: translateX(-66.6667%);
+}
+
+/* Gatilho para usar grid em md+ no futuro: por enquanto apenas preserva o comportamento */
+@media (min-width: 768px) {
+  /* Em telas maiores podemos aplicar um layout diferente (grid 'desconstruído'). */
+  /* Deixe preparado: o carousel fica estático (sem overflow) e cada article pode ficar com width auto */
+  #container-bottom-right-content .carousel-track {
+    transition: none; /* optional: desativa animação se for necessário */
+  }
 }
