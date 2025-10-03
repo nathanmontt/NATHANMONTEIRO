@@ -19,8 +19,7 @@ function TopLeftContent() {
 
             <div id="container-text-about">
                 <div className="dev-about
-                                mt-[2em]"
-                >
+                                mt-[1.5em]">
                     <p>
                         Entusiasta em <span className="font-semibold">Desenvolvimento Frontend</span> (<em>ainda no básico</em>) e em <span className="font-semibold">Análise de Dados</span> (<em>mais básico ainda</em>). Possuo experiência prática em desenvolvimento e mentoria de novos programadores, atuando tanto em projetos próprios quanto no ambiente de startups. Atuo como <span className="font-semibold">Smart Hiring Associate (Junior SDR)</span> na Grilo, e como <span className="font-semibold">CEO e CTO</span> da <a href="https://devstart-project.vercel.app/" rel="noreferrer noopener nofollow" target="_blank">devStart();</a>, uma iniciativa voluntária, onde guio e mentoro mais de 30 programadores iniciantes em sua jornada no desenvolvimento web.
                     </p>
@@ -28,7 +27,7 @@ function TopLeftContent() {
             </div>
 
             <div id="container-social-icons"
-                className="flex gap-2">
+                className="flex gap-2 mt-[1em]">
                 <Github />
                 <Linkedin />
             </div>
